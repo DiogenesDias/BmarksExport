@@ -1,0 +1,15 @@
+# IDEs
+.idea/
+.vscode/
+.vs/
+*.iml
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Dependencies
+node_modules/

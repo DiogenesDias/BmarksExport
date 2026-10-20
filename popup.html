@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="popup.css">
+  <script src="tema.js"></script>
+</head>
+<body>
+  <header class="topo">
+    <img class="logo" src="icons/icon-128.png" alt="">
+    <div class="marca">
+      <h1 data-i18n="titulo">Export Bookmarks</h1>
+      <small data-i18n="subtitulo">JSON, HTML, CSV</small>
+    </div>
+    <div class="acoes">
+      <div class="segmento" role="radiogroup" data-i18n-aria="oQueExportar" aria-label="What to Export">
+        <button id="modo-tudo" role="radio" aria-checked="true">
+          <span data-i18n="tudo">All</span>
+        </button>
+        <button id="modo-pasta" role="radio" aria-checked="false">
+          <span data-i18n="umaPasta">Folder</span>
+        </button>
+      </div>
+      <button type="button" class="tema" id="tema" aria-label="Use dark theme">
+        <svg class="tema-lua" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.2 2.1a5.4 5.4 0 1 0 3.7 9.2 4.4 4.4 0 0 1-3.7-9.2z"/></svg>
+        <svg class="tema-sol" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.4"/><path d="M8 1.7v1.7M8 12.6v1.7M1.7 8h1.7M12.6 8h1.7M3.5 3.5l1.2 1.2M11.3 11.3l1.2 1.2M3.5 12.5l1.2-1.2M11.3 4.7l1.2-1.2"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="escolha-pasta" id="escolha-pasta" hidden>
+    <input class="busca" id="busca" type="search" data-i18n-placeholder="buscarPasta" placeholder="Search Folder…"
+      data-i18n-aria="buscarPasta" aria-label="Search Folder" autocomplete="off">
+    <div class="arvore" id="arvore" role="tree" data-i18n-aria="pastasDeFavoritos" aria-label="Bookmark Folders"></div>
+  </div>
+  <footer class="rodape">
+    <dl class="resumo" id="resumo"></dl>
+    <div class="opcoes">
+      <div class="segmento" id="formato" role="radiogroup" data-i18n-aria="formato" aria-label="Format">
+        <button type="button" role="radio" data-valor="json" aria-checked="true" data-i18n="json">JSON</button>
+        <button type="button" role="radio" data-valor="html" aria-checked="false" data-i18n="html">HTML</button>
+        <button type="button" role="radio" data-valor="csv" aria-checked="false" data-i18n="csv">CSV</button>
+      </div>
+      <div class="segmento" id="detalhe" role="radiogroup" data-i18n-aria="detalhe" aria-label="Detail">
+        <button type="button" role="radio" data-valor="basic" aria-checked="true" data-i18n="basico">Basic</button>
+        <button type="button" role="radio" data-valor="full" aria-checked="false" data-i18n="completo">Full</button>
+      </div>
+    </div>
+    <button class="botao" id="exportar" disabled data-i18n="baixar">Download</button>
+    <p class="status" id="status" role="status"></p>
+  </footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

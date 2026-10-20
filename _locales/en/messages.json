@@ -1,0 +1,5 @@
+{
+  "nome": { "message": "Export Bookmarks" },
+  "descricao": { "message": "Exports Chrome Bookmarks, All or from One Folder, to JSON, HTML, or CSV." },
+  "dica": { "message": "Export Bookmarks" }
+}
